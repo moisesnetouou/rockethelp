@@ -1,11 +1,15 @@
 import {Heading, Icon, VStack, useTheme} from 'native-base';
 import {Envelope, Key} from 'phosphor-react-native';
+import { useState } from 'react';
 
 import Logo from '../assets/logo_primary.svg';
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 
 export function SignIn(){
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+
   const {colors} = useTheme();
 
   return(
